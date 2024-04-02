@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Definindo variáveis de cor */
+:root {
+    --dark-purple: #5A0264;
+    --dark-gray: #404040;
+    --light-pink: #ECE4F1;
+}
+
+/* Redefinindo e padronizando */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Começando a estilização */
+
+body {
+    padding: 0 48px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header > h1 {
+    width: 100%;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--dark-purple);
+    font-size: 42px;
+    font-weight: 200;
+}
+
+.menu-navegacao {
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    color: var(--dark-gray);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-navegacao li {
+    margin: 0 20px;
+}
