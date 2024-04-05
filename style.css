@@ -64,6 +64,15 @@ header>h1 {
 .menu-navegacao li {
     margin: 0 20px; /* Adiciona margens aos itens de menu */
 }
+
+.menu-navegacao a {
+    transition: 0.5s;
+}
+
+.menu-navegacao a:hover {
+    color: var(--dark-purple);
+}
+
 /* TORNANDO RESPONSIVO */
 
 .hamburguer {
@@ -189,7 +198,6 @@ header>h1 {
 .services {
     width: 85%; /* Largura do container de serviços */
     margin: auto; /* Centraliza horizontalmente */
-    padding: 0 20px; /* Adiciona espaço de preenchimento às laterais */
 }
 
 .services h2 {
@@ -248,17 +256,53 @@ header>h1 {
     border: 2px solid var(--light-purple); /* Borda sólida */
 }
 
+@media (max-width: 950px) {
+    .services {
+        width: 100%;
+    }
+
+    .services h2 {
+        font-size: 32px;
+    }
+
+    .services .container {
+        display: block;
+    }
+
+    .container .menu-container {
+        position: relative; /* Posicionamento absoluto em relação ao container pai */
+        width: 93%; /* Largura */
+        text-align: center; /* Alinhamento de texto */
+        font-family: "Noto Serif", "serif"; /* Fonte do texto */
+        color: var(--dark-gray); /* Cor do texto */
+        padding: 20px 10px; /* Adiciona espaço de preenchimento */
+        left: 50%; /* Alinha o elemento no centro horizontal */
+        transform: translate(-40%, -10%); /* Centraliza horizontalmente */
+    }
+
+    .menu-container h3 {
+        font-size: 28px; /* Tamanho da fonte */
+        font-weight: 400; /* Peso da fonte */
+        letter-spacing: 2px; /* Espaçamento entre letras */
+    }
+
+    .menu-container p {
+        margin: 30px 0; /* Margem superior e inferior */
+        font-size: 19px; /* Tamanho da fonte */
+    }
+}
+
 /* ASIDE */
 
 hr {
-    width: 82%; /* Largura */
+    width: 85%; /* Largura */
     margin: 40px auto; /* Margem superior e inferior */
     color: var(--dark-gray); /* Cor */
 }
 
 aside {
     display: flex; /* Exibe os itens em linha */
-    width: 82%; /* Largura */
+    width: 85%; /* Largura */
     margin: auto; /* Centraliza horizontalmente */
 }
 
@@ -275,12 +319,31 @@ aside figure img {
     width: 100%; /* Garante que a imagem ocupe toda a largura do container */
 }
 
+@media (max-width: 950px) {
+    hr {
+        width: 100%; /* Largura */
+        margin: 40px auto; /* Margem superior e inferior */
+        color: var(--dark-gray); /* Cor */
+    }
+
+    aside {
+        display: grid; /* Altera o layout para grid */
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas com largura igual */
+        width: 100%;
+        gap: 20px; /* Espaçamento entre as células */
+    }
+
+    aside figure {
+        flex-basis: auto; /* Reinicializa a base de flexão */
+        margin-right: 0; /* Remove a margem à direita */
+    }
+}
 /* FOOTER */
 
 footer {
     display: flex; /* Exibe os itens em linha */
     flex-direction: column; /* Direção da coluna para alinhar verticalmente */
-    width: 82%; /* Largura */
+    width: 85%; /* Largura */
     margin: auto; /* Centraliza horizontalmente */
     background-color: var(--light-pink); /* Cor de fundo */
     margin-top: 50px; /* Margem superior */
@@ -341,4 +404,30 @@ footer nav ul {
 footer nav ul li {
     margin: 30px 15px; /* Margem superior e inferior */
     padding-bottom: 20px; /* Espaçamento inferior */
+}
+
+@media (max-width: 950px) {
+    footer {
+        width: calc(100% + 96px); /* Largura */
+        margin-top: 100px; /* Margem superior */
+        padding-top: 50px; /* Espaço de preenchimento superior */
+        transform: translateX(-48px);
+    }
+    
+    footer nav ul {
+        font-family: "Nunito", sans-serif; /* Fonte do texto */
+        font-size: 15px; /* Tamanho da fonte */
+        font-weight: 600; /* Peso da fonte */
+        color: var(--dark-gray); /* Cor do texto */
+        display: flex; /* Exibe os itens em linha */
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-block: 40px; /* Espaçamento inferior */
+    
+    }
+    
+    footer nav ul li {
+        margin: 0px 15px; /* Margem superior e inferior */
+    }
+    
 }
