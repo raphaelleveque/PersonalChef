@@ -37,3 +37,118 @@ a {
 body {
     padding: 0 48px; /* Adiciona preenchimento aos lados do corpo */
 }
+
+/* HEADER */
+header {
+    display: flex; /* Exibe os itens em linha */
+    align-items: center; /* Alinha os itens verticalmente */
+    height: 80px; /* Define a altura do cabeçalho */
+}
+
+header>h1 {
+    width: 100%; /* Garante que o título ocupe toda a largura do cabeçalho */
+    font-family: "Cormorant Garamond", "Newsreader", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a família de fontes */
+    color: var(--dark-purple); /* Define a cor do texto */
+    font-size: 48px; /* Define o tamanho da fonte */
+    font-weight: 400; /* Define o peso da fonte */
+}
+
+.menu-navegacao {
+    font-family: "Nunito", sans-serif; /* Define a família de fontes */
+    font-size: 15px; /* Define o tamanho da fonte */
+    color: var(--dark-gray); /* Define a cor do texto */
+    display: flex; /* Exibe os itens em linha */
+    justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+.menu-navegacao li {
+    margin: 0 20px; /* Adiciona margens aos itens de menu */
+}
+
+.menu-navegacao a {
+    transition: 0.5s;
+}
+
+.menu-navegacao a:hover {
+    color: var(--dark-purple);
+}
+
+/* TORNANDO RESPONSIVO */
+
+.hamburguer {
+    display: none; /* Oculta o ícone hamburguer */
+    border: none;
+    background: none;
+    border-top: 3px solid var(--dark-gray); /* Define a borda superior */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    position: relative; /* Define a posição relativa */
+    content: ""; /* Adiciona conteúdo vazio */
+    display: block; /* Exibe como bloco */
+    height: 3px; /* Define a altura das barras */
+    width: 30px; /* Define a largura das barras */
+    margin-top: 5px; /* Define a margem superior */
+    background-color: var(--dark-gray); /* Define a cor das barras */
+    transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+/* Exibição do menu hamburguer quando a largura da tela é menor que 950px */
+@media (max-width: 950px) {
+    header h1 {
+        font-size: 32px; /* Define o tamanho da fonte do título */
+    }
+
+    .hamburguer {
+        display: block; /* Exibe o ícone hamburguer */
+        z-index: 3; /* Define a ordem de empilhamento */
+    }
+
+    .menu-navegacao {
+        position: fixed; /* Define a posição fixa */
+        top: 0; /* Alinha no topo */
+        left: 0; /* Alinha à esquerda */
+        width: 100%; /* Define a largura total */
+        height: 100%; /* Define a altura total */
+        background-color: white; /* Define a cor de fundo */
+        flex-direction: column; /* Define a direção da flexbox como coluna */
+        justify-content: flex-start; /* Alinha os itens ao início */
+        font-family: "Nunito"; /* Define a família da fonte */
+        font-size: 32px; /* Define o tamanho da fonte */
+        padding: 40px 20px; /* Adiciona preenchimento */
+        transition: left 0.5s ease; /* Adiciona transição suave */
+        overflow-y: auto; /* Habilita a rolagem vertical */
+        overscroll-behavior: none; /* Desabilita o comportamento de rolamento */
+        z-index: 2; /* Define a ordem de empilhamento */
+    }
+
+    .menu-navegacao li {
+        padding-block: 10px; /* Adiciona preenchimento superior e inferior */
+        margin-block: 5px; /* Adiciona margem superior e inferior */
+    }
+
+    /* Estilo para ocultar o menu de navegação */
+    .menu-navegacao.hidden {
+        left: -100%; /* Move o menu para fora da tela */
+    }
+
+    /* Estilo para ocultar a rolagem da página quando o menu de navegação está aberto */
+    body.menu-aberto {
+        overflow: hidden; /* Desabilita a rolagem */
+    }
+
+    .menu-aberto .hamburguer {
+        border-top: 0; /* Remove a borda superior do ícone hamburguer */
+    }
+
+    .menu-aberto .hamburguer::before {
+        transform: rotate(45deg); /* Rotação e deslocamento da linha superior */
+    }
+    
+    .menu-aberto .hamburguer::after {
+        transform: rotate(-45deg); /* Rotação e deslocamento da linha inferior */
+        top: -7px; /* Desloca a linha inferior para cima */
+    }
+}

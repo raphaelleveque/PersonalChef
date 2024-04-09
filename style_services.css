@@ -3,7 +3,7 @@
 .main-image {
     position: relative; /* Posição relativa para posicionamento do conteúdo absoluto */
     width: 100%; /* Certifique-se de definir a largura para ocupar todo o espaço disponível */
-    height: calc(100vh - 80px); /* Defina a altura desejada subtraindo a altura do cabeçalho */
+    height: 60vh; /* Defina a altura desejada subtraindo a altura do cabeçalho */
     overflow: hidden; /* Isso fará com que o conteúdo excedente seja cortado */
 }
 
@@ -24,19 +24,28 @@
     -webkit-text-stroke: 1px black; /* Adiciona contorno ao texto */
 }
 
+main > h2 {
+    font-family: "Cormorant Garamond", "Newsreader", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a família de fontes */
+    font-size: 60px;
+    color: var(--dark-gray);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 80px;
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 950px) {
+    .main-image {
+        height: 50vh;
+    }
     .main-image img {
-        height: 100vh; /* Define a altura da imagem para ocupar toda a altura da tela */
+        height: 50vh; /* Define a altura da imagem para ocupar toda a altura da tela */
         width: auto; /* Define a largura automática para manter a proporção */
     }
 
-    .main-image h2 {
-        font-size: 27px; /* Redefine o tamanho da fonte para telas menores */
-        left: 5%; /* Posiciona o texto mais à esquerda */
-        top: 60%; /* Posiciona o texto mais abaixo */
-        font-weight: 800; /* Ajusta o peso da fonte */
+    main > h2 {
+        font-size: 32px;
     }
 }
 
@@ -45,16 +54,8 @@
     margin: auto; /* Centraliza horizontalmente */
 }
 
-.services h2 {
-    text-align: end; /* Alinha o texto à direita */
-    font-family: "Cormorant Garamond", "Libre Baskerville", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fonte do texto */
-    color: var(--dark-gray); /* Cor do texto */
-    font-size: 54px; /* Tamanho da fonte */
-    font-weight: 400; /* Peso da fonte */
-    margin: 80px 0; /* Margem superior e inferior */
-}
-
 .services .container {
+    margin-block: 80px;
     position: relative; /* Posição relativa para posicionamento do conteúdo absoluto */
     display: flex; /* Exibe os itens em linha */
 }
