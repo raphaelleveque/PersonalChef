@@ -11,21 +11,11 @@
     width: 100%; /* Garante que a imagem ocupe toda a largura do container */
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Para corrigir qualquer espaço extra ao redor da imagem */
-}
-
-.main-image h2 {
-    position: absolute; /* Posicionamento absoluto para centralizar o texto */
-    top: 20%; /* Posiciona o texto no centro vertical */
-    left: 55%; /* Posiciona o texto no centro horizontal */
-    color: white; /* Cor do texto */
-    font-family: "Libre Baskerville", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fonte do texto */
-    font-size: 60px; /* Tamanho da fonte */
-    font-weight: 300; /* Peso da fonte */
-    -webkit-text-stroke: 1px black; /* Adiciona contorno ao texto */
+    margin: auto;
 }
 
 main > h2 {
-    font-family: "Cormorant Garamond", "Newsreader", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define a família de fontes */
+    font-family: var(--freightBigPro);
     font-size: 60px;
     color: var(--dark-gray);
     font-weight: 400;
@@ -76,7 +66,7 @@ main > h2 {
     right: 0%; /* Alinha o elemento à direita */
     top: 50%; /* Posiciona o elemento no centro vertical */
     transform: translate(0, -50%); /* Centraliza verticalmente */
-    font-family: "Noto Serif", "serif"; /* Fonte do texto */
+    font-family: var(--livory); /* Fonte do texto */
     color: var(--dark-gray); /* Cor do texto */
     padding: 20px; /* Adiciona espaço de preenchimento */
 }
@@ -96,7 +86,7 @@ main > h2 {
     background-color: var(--light-pink); /* Cor de fundo */
     padding: 20px 60px; /* Espaço de preenchimento */
     margin-top: 30px; /* Margem superior */
-    font-family: "Nunito", sans-serif; /* Fonte do texto */
+    font-family: var(--futuraPT); /* Fonte do texto */
     font-size: 16px; /* Tamanho da fonte */
     color: var(--light-purple); /* Cor do texto */
     border: 2px solid var(--light-purple); /* Borda sólida */
@@ -119,7 +109,7 @@ main > h2 {
         position: relative; /* Posicionamento absoluto em relação ao container pai */
         width: 93%; /* Largura */
         text-align: center; /* Alinhamento de texto */
-        font-family: "Noto Serif", "serif"; /* Fonte do texto */
+        font-family: var(--livory); /* Fonte do texto */
         color: var(--dark-gray); /* Cor do texto */
         padding: 20px 10px; /* Adiciona espaço de preenchimento */
         left: 50%; /* Alinha o elemento no centro horizontal */
@@ -136,144 +126,4 @@ main > h2 {
         margin: 30px 0; /* Margem superior e inferior */
         font-size: 19px; /* Tamanho da fonte */
     }
-}
-
-/* ASIDE */
-
-hr {
-    width: 85%; /* Largura */
-    margin: 40px auto; /* Margem superior e inferior */
-    color: var(--dark-gray); /* Cor */
-}
-
-aside {
-    display: flex; /* Exibe os itens em linha */
-    width: 85%; /* Largura */
-    margin: auto; /* Centraliza horizontalmente */
-}
-
-aside figure {
-    flex-basis: 16%; /* Define a base de flexão para 16% */
-    margin-right: 25px; /* Margem à direita */
-}
-
-aside figure:last-child {
-    margin-right: 0; /* Remove a margem à direita do último item */
-}
-
-aside figure img {
-    width: 100%; /* Garante que a imagem ocupe toda a largura do container */
-}
-
-@media (max-width: 950px) {
-    hr {
-        width: 100%; /* Largura */
-        margin: 40px auto; /* Margem superior e inferior */
-        color: var(--dark-gray); /* Cor */
-    }
-
-    aside {
-        display: grid; /* Altera o layout para grid */
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas com largura igual */
-        width: 100%;
-        gap: 20px; /* Espaçamento entre as células */
-    }
-
-    aside figure {
-        flex-basis: auto; /* Reinicializa a base de flexão */
-        margin-right: 0; /* Remove a margem à direita */
-    }
-}
-/* FOOTER */
-
-footer {
-    display: flex; /* Exibe os itens em linha */
-    flex-direction: column; /* Direção da coluna para alinhar verticalmente */
-    width: 85%; /* Largura */
-    margin: auto; /* Centraliza horizontalmente */
-    background-color: var(--light-pink); /* Cor de fundo */
-    margin-top: 50px; /* Margem superior */
-    align-items: center; /* Centraliza os itens verticalmente */
-    color: var(--dark-gray); /* Cor do texto */
-    padding-top: 50px; /* Espaço de preenchimento superior */
-}
-
-footer .social-icons {
-    display: flex; /* Exibe os itens em linha */
-}
-
-footer .social-icons a {
-    display: flex; /* Exibe os itens em linha */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    padding: 20px; /* Espaço de preenchimento */
-    background-color: var(--light-pink); /* Cor de fundo */
-    margin: 10px; /* Margem */
-    width: 55px; /* Largura */
-    height: 55px; /* Altura */
-    border-radius: 50%; /* Borda circular */
-    transition: 0.5s; /* Transição suave */
-    border: 2px solid black; /* Borda sólida */
-}
-
-footer .social-icons a i {
-    font-size: 32px; /* Tamanho da fonte do ícone */
-    color: black; /* Cor do ícone */
-    opacity: 0.9; /* Opacidade */
-}
-
-footer .social-icons a:hover {
-    background-color: black; /* Cor de fundo ao passar o mouse */
-}
-
-footer .social-icons a:hover i {
-    color: white; /* Cor do ícone ao passar o mouse */
-}
-
-footer p {
-    text-align: center; /* Alinhamento central */
-    font-family: "Cormorant Garamond", "Libre Baskerville", 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fonte do texto */
-    color: var(--dark-gray); /* Cor do texto */
-    font-size: 21px; /* Tamanho da fonte */
-    font-weight: 400; /* Peso da fonte */
-    margin: 20px 0; /* Margem superior e inferior */
-}
-
-footer nav ul {
-    font-family: "Nunito", sans-serif; /* Fonte do texto */
-    font-size: 15px; /* Tamanho da fonte */
-    font-weight: 600; /* Peso da fonte */
-    color: var(--dark-gray); /* Cor do texto */
-    display: flex; /* Exibe os itens em linha */
-}
-
-footer nav ul li {
-    margin: 30px 15px; /* Margem superior e inferior */
-    padding-bottom: 20px; /* Espaçamento inferior */
-}
-
-@media (max-width: 950px) {
-    footer {
-        width: calc(100% + 96px); /* Largura */
-        margin-top: 100px; /* Margem superior */
-        padding-top: 50px; /* Espaço de preenchimento superior */
-        transform: translateX(-48px);
-    }
-    
-    footer nav ul {
-        font-family: "Nunito", sans-serif; /* Fonte do texto */
-        font-size: 15px; /* Tamanho da fonte */
-        font-weight: 600; /* Peso da fonte */
-        color: var(--dark-gray); /* Cor do texto */
-        display: flex; /* Exibe os itens em linha */
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-block: 40px; /* Espaçamento inferior */
-    
-    }
-    
-    footer nav ul li {
-        margin: 0px 15px; /* Margem superior e inferior */
-    }
-    
 }

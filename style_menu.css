@@ -1,0 +1,149 @@
+/* MAIN */
+
+.main-image {
+    width: 100%; /* Certifique-se de definir a largura para ocupar todo o espaço disponível */
+    height: 60vh; /* Defina a altura desejada subtraindo a altura do cabeçalho */
+    overflow: hidden; /* Isso fará com que o conteúdo excedente seja cortado */
+}
+
+.main-image img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Para corrigir qualquer espaço extra ao redor da imagem */
+}
+
+.big-container > h2 {
+    font-family: var(--freightBigPro);
+    font-size: 60px;
+    color: var(--dark-gray);
+    font-weight: 400;
+    margin: auto;
+    text-align: end;
+    margin-block: 60px;
+}
+
+.big-container {
+    width: 80%;
+    margin: auto;
+}
+/* RESPONSIVO */
+
+@media (max-width: 950px) {
+    .main-image {
+        height: 50vh;
+    }
+    .main-image img {
+        height: 50vh; /* Define a altura da imagem para ocupar toda a altura da tela */
+        width: auto; /* Define a largura automática para manter a proporção */
+        margin: auto;
+    }
+
+    main > h2 {
+        font-size: 32px;
+        text-align: center
+    }
+
+    .big-container {
+        width: 100%;
+    }
+}
+
+.two-columns {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+}
+
+.two-columns .column-one {
+    flex-basis: 40%; /* Define a largura inicial da primeira coluna */
+    max-width: 40%; /* Define a largura máxima da primeira coluna */
+}
+
+.two-columns .column-one img {
+    max-width: 100%; /* A imagem terá no máximo 100% da largura do seu contêiner pai (.column-one) */
+    height: auto; /* Garante que a altura da imagem seja ajustada automaticamente para manter a proporção */
+}
+
+.two-columns .column-two {
+    flex-basis: 60%; /* Define a largura inicial da segunda coluna */
+    max-width: 60%; /* Define a largura máxima da segunda coluna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-columns .column-two p {
+    font-size: 21px;
+    color: var(--dark-gray);
+    padding: 20px;
+    font-family: var(--freightBigPro);
+    text-align: center;
+}
+
+
+.two-columns .column-two h3 {
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: var(--futuraPT);
+    font-weight: 400;
+    color: var(--dark-gray);
+    position: relative; /* Adiciona posição relativa ao h3 */
+}
+
+.two-columns .column-two h3::after {
+    content: "";
+    position: absolute; /* Define posição absoluta para o pseudo-elemento */
+    left: 0; /* Posiciona o início da linha no canto esquerdo */
+    bottom: 0px; /* Ajusta a distância da linha em relação ao texto */
+    width: 100%; /* Define a largura da linha como 100% do contêiner */
+    height: 2px;
+    background-color: lightgray; /* Altera color para background-color */
+}
+
+@media (max-width: 950px) {
+    .two-columns .column-one {
+        display: none;
+    }
+
+    .two-columns {
+        justify-content: center;
+    }
+
+}
+
+.hr-menu {
+    margin-block: 60px;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 30px; /* Espaçamento entre as imagens */
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
+    height: auto;
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    aspect-ratio: 1; /* Define a proporção de aspecto para manter as imagens quadradas */
+    object-fit: cover; /* Faz com que a imagem preencha o contêiner, mantendo sua proporção */
+}
+
+.grid-item h4 {
+    font-size: 27px;
+    color: var(--dark-gray);
+    font-weight: 500;
+    font-family: var(--freightBigPro);
+    padding-block: 10px;
+}
+
+.grid-item p {
+    font-size: 22px;
+    color: var(--dark-gray);
+    font-family: var(--freightBigPro);
+}
