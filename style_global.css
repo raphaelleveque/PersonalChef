@@ -40,6 +40,7 @@ a {
 
 body {
     padding: 0 48px; /* Adiciona preenchimento aos lados do corpo */
+    text-align: center;
 }
 
 /* HEADER */
@@ -55,6 +56,7 @@ header>h1 {
     color: var(--dark-purple); /* Define a cor do texto */
     font-size: 48px; /* Define o tamanho da fonte */
     font-weight: 400; /* Define o peso da fonte */
+    text-align: left;
 }
 
 .menu-navegacao {
@@ -103,6 +105,7 @@ header>h1 {
 @media (max-width: 950px) {
     header h1 {
         font-size: 32px; /* Define o tamanho da fonte do título */
+        text-align: center;
     }
 
     .hamburguer {
@@ -194,7 +197,7 @@ aside figure img {
 
     aside {
         display: grid; /* Altera o layout para grid */
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas com largura igual */
+        grid-template-columns: repeat(3, 1fr); /* 2 colunas com largura igual */
         width: 100%;
         gap: 20px; /* Espaçamento entre as células */
     }
@@ -202,6 +205,12 @@ aside figure img {
     aside figure {
         flex-basis: auto; /* Reinicializa a base de flexão */
         margin-right: 0; /* Remove a margem à direita */
+    }
+}
+
+@media (max-width: 500px) {
+    aside {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /* FOOTER */

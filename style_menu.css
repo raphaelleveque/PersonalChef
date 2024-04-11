@@ -38,7 +38,7 @@
         margin: auto;
     }
 
-    main > h2 {
+    .big-container > h2 {
         font-size: 32px;
         text-align: center
     }
@@ -109,6 +109,15 @@
         justify-content: center;
     }
 
+    .two-columns .column-two {
+        flex-basis: 100%; /* Define a largura inicial da segunda coluna */
+        max-width: 100%; /* Define a largura máxima da segunda coluna */
+    }
+
+    .two-columns .column-two h3::after {
+        display: none;
+    }
+
 }
 
 .hr-menu {
@@ -146,4 +155,20 @@
     font-size: 22px;
     color: var(--dark-gray);
     font-family: var(--freightBigPro);
+}
+
+@media (max-width: 950px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 3 colunas iguais */
+        gap: 30px; /* Espaçamento entre as imagens */
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 3 colunas iguais */
+        gap: 30px; /* Espaçamento entre as imagens */
+    }
 }
